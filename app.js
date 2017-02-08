@@ -51,9 +51,10 @@ app.use(async (ctx, next) => {
     } else if (/^\/api.*/.test(ctx.request.url)) {
         if (ctx.session.openid) await next()
         else{ctx.status=403;ctx.body = Util.sendData(403, {msg: '没有openid或者openid过期'}, '没有openid或者openid过期')}
-    } else if (/^\/adminapi.*/.test(ctx.request.url)) {
-        if (ctx.session.user||ctx.request.url === '/adminapi/login') await next()
-        else {ctx.status=403;ctx.body = Util.sendData(403, {msg: '没有登录或者登录过期'}, '没有登录或者登录过期')}
+    } else if (/^\/adminapi.*/.test(ctx.request.url)) { 
+        await next()
+        // if (ctx.session.user||ctx.request.url === '/adminapi/login') await next()
+        // else {ctx.status=403;ctx.body = Util.sendData(403, {msg: '没有登录或者登录过期'}, '没有登录或者登录过期')}
     } else {
         await next()
     }

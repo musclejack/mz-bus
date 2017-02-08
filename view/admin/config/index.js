@@ -23,14 +23,14 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
         '/buscode': {
-            target: 'http://mzbus.cn',
+            target: 'http://localhost:3000',
             changeOrigin: true,
             pathRewrite: {
               // '/code': ''
             }
         },
         '/adminapi': {
-            target: 'http://mzbus.cn',
+            target: 'http://localhost:3000',
             changeOrigin: true,
             pathRewrite: {
               // '/code': ''

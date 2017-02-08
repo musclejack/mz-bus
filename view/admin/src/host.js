@@ -8,3 +8,5 @@ const adminapi = '/adminapi'
 exports.adminLogin = adminapi+'/login'
 
 exports.getUserList = adminapi+'/getUserList'
+
+exports.getUserCount = adminapi+'/getUserCount'

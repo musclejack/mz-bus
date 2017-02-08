@@ -26,6 +26,12 @@ const getUserList = async (page, count) => {
     return data
 }
 
+const getUserCount = async () => {
+    let sql = `SELECT COUNT(*) FROM user`
+    let data = await query(sql, null)
+    return data
+}
+
 const updateUserDetil = async (openid, name, tele) => {
     let sql = `update user set name = ?, tele = ? where openid = ?`
     let data = await query(sql, [name, tele, openid])
@@ -49,7 +55,7 @@ exports.findUserByOpenid = findUserByOpenid
 exports.findUserByTele = findUserByTele
 //后端分页查找
 exports.getUserList = getUserList
-
+exports.getUserCount = getUserCount
 //
 //
 //

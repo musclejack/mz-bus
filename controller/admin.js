@@ -29,5 +29,11 @@ const getUserList = async (ctx) => {
     }
 }
 
+const getUserCount = async (ctx) => {
+    let data = await User.getUserCount()
+    // console.log(data,data[0]['COUNT(*)'])
+    ctx.body = Util.sendData(200, {count: data[0]['COUNT(*)']}, '查找成功')
+}
 exports.login = login
 exports.getUserList = getUserList
+exports.getUserCount = getUserCount

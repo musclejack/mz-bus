@@ -11,7 +11,7 @@ const routers = [{
         });
     }
 },{
-    path: '/list',
+    path: '/list/:id',
     name: 'list',
     component(resolve) {
         require.ensure(['./views/list'], () => {

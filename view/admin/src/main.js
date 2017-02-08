@@ -5,11 +5,11 @@ import VueRouter from 'vue-router'
 import VueRrsource from 'vue-resource'
 import routes from './router.js'
 import store from './vuex/store'
-// import ElementUI from 'element-ui'
+import ElementUI from 'element-ui'
 import './scss/base.scss'
 
-// import 'element-ui/lib/theme-default/index.css'
-// Vue.use(ElementUI)
+import 'element-ui/lib/theme-default/index.css'
+Vue.use(ElementUI)
 Vue.use(VueRrsource)
 
 const router = new VueRouter({
