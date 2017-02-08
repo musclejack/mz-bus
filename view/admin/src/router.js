@@ -18,6 +18,14 @@ const routers = [{
             resolve(require('./views/list/index.vue'));
         });
     }
+},{
+    path: '/carlist',
+    name: 'car-list',
+    component(resolve) {
+        require.ensure(['./views/car-list'], () => {
+            resolve(require('./views/car-list/index.vue'));
+        });
+    }
 }];
 
 export default routers;

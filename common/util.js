@@ -24,7 +24,15 @@ const md5 = text => {
     return crypto.createHash('md5').update(text).digest('hex');
 }
 
+const validate = (data, ...args) => {
+    for (let item of args) {
+        if (!data[item]) return false
+    }
+    return true
+}
+
 exports.sendData = sendData
 exports.validateTele = validateTele
 exports.cowarp = cowarp
 exports.md5 = md5
+exports.validate = validate

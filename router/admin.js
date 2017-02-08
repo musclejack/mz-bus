@@ -6,4 +6,9 @@ const router = require('koa-router')()
 router.post('/login', Admin.login)
 router.get('/getUserList', Admin.getUserList)
 router.get('/getUserCount', Admin.getUserCount)
+router.get('/getLoadList', Admin.getLoadList)
+router.post('/addLoadInfo', Admin.addLoadInfo)
+router.post('/updateLoadInfo', Admin.updateLoadInfo)
+router.post('/deleteLoadInfo', Admin.deleteLoadInfo)
+
 module.exports = router

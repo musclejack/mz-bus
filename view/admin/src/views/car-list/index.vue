@@ -25,14 +25,6 @@
         </el-table-column>
       </el-table>
     </div>
-    <div class="pager">
-        <el-pagination
-            @current-change="handleCurrentChange"
-            small
-            layout="prev, pager, next"
-            :total="count">
-        </el-pagination>
-    </div>
 </div>
 </template>
 
